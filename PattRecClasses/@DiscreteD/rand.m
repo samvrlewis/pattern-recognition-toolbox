@@ -18,5 +18,13 @@ if numel(pD)>1
 end;
 
 %*** Insert your own code here and remove the following error message 
+R = zeros(1, nData);
 
-error('Not yet implemented');
+cumProbs = cumsum(pd.ProbMass);
+randNums = rand(1, nData); %uniformly random numbers in interval (0, 1)
+
+for i = 1:nData
+    %find the 'bin' each random number is in.. the actual random number is
+    %then is this 'bin'
+    R(i) = find(randNums(i) < cumProbs, 1); 
+end
