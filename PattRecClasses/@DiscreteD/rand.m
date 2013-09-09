@@ -19,12 +19,11 @@ end;
 
 %*** Insert your own code here and remove the following error message 
 R = zeros(1, nData);
-
 cumProbs = cumsum(pD.ProbMass);
-randNums = rand(1, nData); %uniformly random numbers in interval (0, 1)
 
 for i = 1:nData
-    %find the 'bin' each random number is in.. the actual random number is
-    %then is this 'bin'
-    R(i) = find(randNums(i) < cumProbs, 1); 
+    %generate a uniformly distributed number with rand in the interval (0,
+    %1) then find the 'bin' that the random number is in according to the
+    %probability mass function. the actual random number isthen is this 'bin'
+    R(i) = find(rand(1) < cumProbs, 1); 
 end
