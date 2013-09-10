@@ -1,0 +1,54 @@
+\documentclass[11pt]{article}   % list options between brackets
+\usepackage{graphicx}  % most common package for figure handling
+\usepackage{amsmath}  
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{verbatim} % useful for displaying computer code or similar verbatim
+\usepackage{full page} % This package changes the otherwise very generous margins to 1 inch on all sides
+\usepackage{float}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{bigstrut}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{pdflscape }
+\usepackage{program}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+
+ \usepackage{algpseudocode}
+\usepackage{subfig}
+\begin{document}
+\setlength{\parindent}{0.00in}
+%\ttfamily
+
+\title{EN2202 Assignment 1}
+
+\author{
+ Sam Lewis\\
+ svrlewis@kth.se
+  \and
+  Bjoern Fischer\\
+  ???
+}
+\date{} 
+\maketitle
+\linespread{1.5}
+
+\section{Verification of the Markov chain code}
+
+\begin{lstlisting}
+%*** Insert your own code here and remove the following error message 
+R = zeros(1, nData);
+cumProbs = cumsum(pD.ProbMass);
+
+for i = 1:nData
+    %generate a uniformly distributed number with rand in the interval (0,
+    %1) then find the 'bin' that the random number is in according to the
+    %probability mass function. the actual random number isthen is this 'bin'
+    R(i) = find(rand(1) < cumProbs, 1); 
+end
+\end{lstlisting}\
+
+
+\end{document}
+
