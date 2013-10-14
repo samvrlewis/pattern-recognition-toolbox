@@ -108,6 +108,8 @@ For the female speech sample, it was possible to locate the segments of voice  b
 \label{euler:1}
 \end{figure}
 
+The code used to create these plots can be found in \texttt{spectrogram.m}
+
 \newpage
 
 \section{Cepstrograms}
@@ -161,7 +163,7 @@ For the female speech sample, the correlation matrices for the spectral and ceps
 Personally, for me, the spectrogram is much easier to interpret. As a human it is easier to filter the information and have an idea about the general trend of the signal so that, for example, it is possible to interpret when there are sections of voice or unvoice. The spectrogram is not as easy to understand and looks a lot more unorganised.
 \end{adjustwidth}\
 
-\textit{Can you see that they represent the same phrase? Could a computer discover this?}\\
+\textit{Can you see that the spectrograms represent the same phrase? Could a computer discover this?}\\
 
 \begin{adjustwidth}{2.5em}{0pt}
 Comparing the male and female spectrograms for the same phrase, it is possible to find the similarities and see that certain sounds, though they may be said with slight differences because of the gender and individual accents of the speaker, are in the same order. \\
@@ -186,7 +188,9 @@ Looking at the plots in figure 9, the cepstrogram looks the most diagonal. This 
 \textit{How could a MFCC represenation in a speech recognizer be confused?}\\
 
 \begin{adjustwidth}{2.5em}{0pt}
-To improve the performance in pattern recognition for speech recognition, the pitch of the signal is removed. Although pitch is not important in the recognition of individual words, it still carries important information in complete phrases. For example, the phrase 'you are an engineer' in English can be both a question or a statement depending on the intonation. Because the pitch of the words in the phrase are discarded in the speech recognition system, it would not be possible to find the meaning of the phrase. \end{adjustwidth}\
+To improve the performance in pattern recognition for speech recognition, the pitch of the signal is removed. Although pitch is not important in the recognition of individual words, it still carries important information in complete phrases. For example, the phrase 'you are an engineer' in English can be both a question or a statement depending on the intonation. Because the pitch of the words in the phrase are discarded in the speech recognition system, it would not be possible to find the meaning of the phrase. \\
+
+On the other hand, there may be cases where the accent of a person or a speech impediment would make the phrase from a person seem different than the same phrase from another person for a MFCC but not for a human.\end{adjustwidth}\
 
 \end{document}
 

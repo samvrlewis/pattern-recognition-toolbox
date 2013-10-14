@@ -1,0 +1,63 @@
+\documentclass[11pt]{article}   % list options between brackets
+\usepackage{graphicx}  % most common package for figure handling
+\usepackage{amsmath}  
+\usepackage{amssymb}
+\usepackage{url}
+\usepackage{verbatim} % useful for displaying computer code or similar verbatim
+\usepackage{full page} % This package changes the otherwise very generous margins to 1 inch on all sides
+\usepackage{float}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{changepage}
+\usepackage{bigstrut}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{pdflscape }
+\usepackage{program}
+\usepackage[framed,numbered,autolinebreaks,useliterate]{mcode}
+
+ \usepackage{algpseudocode}
+\usepackage{subfig}
+\begin{document}
+\setlength{\parindent}{0.00in}
+%\ttfamily
+
+\title{EN2202 Assignment 4}
+
+\author{
+ Sam Lewis\\
+ svrlewis@kth.se
+  \and
+  Bjoern Fischer  
+}
+\date{} 
+\maketitle
+\linespread{1.5}
+
+\section{Code verification}
+
+The code provided in \texttt{forward.m} and \texttt{logprob.m} was verified by first comparing the steps in the code to the algorithm as described in section 5.43 of the text. Then, to verify, the example given in the text was run and the result was compared. The test that was run can be seen in \texttt{forwardTest.m}.\\
+
+Only one issue was identified, which was that the \texttt{forward} method would return a constant value for the final c value when the the HMM was finite. This was a logical flaw and would have severe implications as the c value would be incorrect for most HMMs. 
+
+\section{Speech database}
+
+The following words/phrases were recorded, with each being recorded 15 times. 
+
+
+\begin{itemize}
+  \item Turn on
+  \item Turn off
+  \item Fridge
+  \item Television
+  \item Light
+  \item Microwave
+  \item Oven
+  \item Phone
+\end{itemize}
+
+These were recorded in a silent room on a laptop. In some cases, the keyboard press to stop recording was picked up in the sound file so some processing was needed to remove this click from the sound files. I recorded all sound files myself so while there is no variation in the speaker, there is still some variation in the length and pitch of the recordings. 
+
+\end{document}
+
+
