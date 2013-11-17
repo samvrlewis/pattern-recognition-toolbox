@@ -1,2 +1,2 @@
-EN2202
+Pattern recognition
 ======
