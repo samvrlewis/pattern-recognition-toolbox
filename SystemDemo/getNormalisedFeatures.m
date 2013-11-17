@@ -1,4 +1,4 @@
-function mfccs = getNormalisedFeatures(Y, FS, window, bands)
+function [mfccs, f, t] = getNormalisedFeatures(Y, FS, window, bands)
 
 %get the coeffecients
 [mfccs,~,f,t] = GetSpeechFeatures(Y,FS,window,bands);

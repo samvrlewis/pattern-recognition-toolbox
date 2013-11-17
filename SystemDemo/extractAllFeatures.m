@@ -3,13 +3,13 @@ clear all;
 addpath('/Users/Sam/Dropbox/Uni/EN2202/PattRecClasses');
 addpath('/Users/Sam/Dropbox/Uni/EN2202/GetSpeechFeatures');
 
-directories = {'Fridge', 'Light', 'Microwave', 'Oven', 'Phone', 'Television', 'TurnOff', 'TurnOn'};
-states = [3 3 5 4 3 6 5 5];
+directories = {'Fridge', 'Microwave', 'Oven', 'Phone', 'Television', 'TurnOff', 'TurnOn'};
+states = [5 7 5 5 7 6 6];
 num_words = length(directories);
 words = {};
 
 recordingDir = '/Users/Sam/Dropbox/Uni/EN2202/Recordings/';
-testSamples = 10;
+testSamples = 15;
 
 
 window = 0.030;
@@ -36,7 +36,7 @@ for word_i = 1:num_words
     hmms(word_i) = MakeLeftRightHMM(states(word_i), GaussMixD(), word_features, sample_lengths');
 end
 
-save('hmms3', 'hmms');
+save('vari_states_15trained', 'hmms');
 
 
 %read in each audio sample
